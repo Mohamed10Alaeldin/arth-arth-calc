@@ -73,33 +73,33 @@ body {
     max-width: 100%;
     justify-content: center;
     gap: 1em;
-    & button {
-        border-radius: 10px;
-        border: none;
-        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
-        font-weight: bold;
-        font-size: 2rem;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-    & button:hover,
-    & button:focus {
-        opacity: 0.75;
-        transform: scale(1.05);
-    }
-    & button:active {
-        opacity: 0.5;
-        transform: scale(0.75);
-    }
-    & .equals {
-        grid-row: span 2;
-        background-color: #26577C;
-        color: #E2E2E2;
-    }
-    & .clear {
-        background-color: #E55604;
-        color: #E2E2E2;
-    }
+}
+.calculator .keypad button {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.calculator .keypad button:hover,
+.calculator .keypad button:focus {
+    opacity: 0.75;
+    transform: scale(1.05);
+}
+& button:active {
+    opacity: 0.5;
+    transform: scale(0.75);
+}
+.calculator .keypad .equals {
+    grid-row: span 2;
+    background-color: #26577C;
+    color: #E2E2E2;
+}
+.calculator .keypad .clear {
+    background-color: #E55604;
+    color: #E2E2E2;
 }
 @media (min-width: 450px) {
     .calculator {
