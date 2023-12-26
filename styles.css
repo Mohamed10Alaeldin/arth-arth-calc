@@ -88,7 +88,7 @@ body {
     opacity: 0.75;
     transform: scale(1.05);
 }
-& button:active {
+.calculator .keypad button:active {
     opacity: 0.5;
     transform: scale(0.75);
 }
