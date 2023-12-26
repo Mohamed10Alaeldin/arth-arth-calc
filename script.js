@@ -2,19 +2,13 @@ const expInput = document.querySelector(".screen .current");
 const prevInput = document.querySelector(".screen .previous");
 
 function isOperator(s) {
-    switch (s) {
-        case '+':
-        case '-':
-        case '×':
-        case '÷':
-            return true;
-    }
-    return false;
+    const operators = ['+', '-', '×', '÷'];
+    return operators.some(op => op === s);
 }
 
 const btns = [...document.getElementsByTagName("button")].forEach(element => {
         element.onclick = function () {
-            if (expInput.innerText === "ERROR!" || expInput.innerText === "0") expInput.innerText = "";
+            if (expInput.innerText === "ERROR!") expInput.innerText = "";
             if (isOperator(element.innerText) && isOperator(expInput.innerText.at(-1))) return;
             expInput.innerText += element.innerText;
         };
